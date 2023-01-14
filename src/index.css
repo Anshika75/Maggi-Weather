@@ -29,122 +29,122 @@ Midnight         24
 Late night       1,2
 Witching Hour    3,4 */
 
-.bg0 {
+.bg0, .bt12 {
   background: #012459;
-  background: linear-gradient(to bottom, #012459 0%, #001322 100%);
+  background: linear-gradient(-5deg, #012459 0%, #001322 100%);
 }
 
-.bg1 {
+.bg1, .bt13 {
   background: #003972;
-  background: linear-gradient(to bottom, #003972 0%, #001322 100%);
+  background: linear-gradient(-5deg, #003972 0%, #001322 100%);
 }
 
-.bg2 {
+.bg2, .bt14 {
   background: #003972;
-  background: linear-gradient(to bottom, #003972 0%, #001322 100%);
+  background: linear-gradient(-5deg, #003972 0%, #001322 100%);
 }
 
-.bg3 {
+.bg3, .bt15 {
   background: #004372;
-  background: linear-gradient(to bottom, #004372 0%, #00182b 100%);
+  background: linear-gradient(-5deg, #004372 0%, #00182b 100%);
 }
 
-.bg4 {
+.bg4, .bt16 {
   background: #004372;
-  background: linear-gradient(to bottom, #004372 0%, #011d34 100%);
+  background: linear-gradient(-5deg, #004372 0%, #011d34 100%);
 }
 
-.bg5 {
+.bg5, .bt17 {
   background: #016792;
-  background: linear-gradient(to bottom, #016792 0%, #00182b 100%);
+  background: linear-gradient(-5deg, #016792 0%, #00182b 100%);
 }
 
-.bg6 {
+.bg6, .bt18 {
   background: #07729f;
-  background: linear-gradient(to bottom, #07729f 0%, #042c47 100%);
+  background: linear-gradient(-5deg, #07729f 0%, #042c47 100%);
 }
 
-.bg7 {
+.bg7, .bt19 {
   background: #12a1c0;
-  background: linear-gradient(to bottom, #12a1c0 0%, #07506e 100%);
+  background: linear-gradient(-5deg, #12a1c0 0%, #07506e 100%);
 }
 
-.bg8 {
+.bg8, .bt20 {
   background: #74d4cc;
-  background: linear-gradient(to bottom, #74d4cc 0%, #1386a6 100%);
+  background: linear-gradient(-5deg, #74d4cc 0%, #1386a6 100%);
 }
 
-.bg9 {
+.bg9, .bt21 {
   background: #efeebc;
-  background: linear-gradient(to bottom, #efeebc 0%, #61d0cf 100%);
+  background: linear-gradient(-5deg, #efeebc 0%, #61d0cf 100%);
 }
 
-.bg10 {
+.bg10, .bt22 {
   background: #fee154;
-  background: linear-gradient(to bottom, #fee154 0%, #a3dec6 100%);
+  background: linear-gradient(-5deg, #fee154 0%, #a3dec6 100%);
 }
 
-.bg11 {
+.bg11, .bt23 {
   background: #fdc352;
-  background: linear-gradient(to bottom, #fdc352 0%, #e8ed92 100%);
+  background: linear-gradient(-5deg, #fdc352 0%, #e8ed92 100%);
 }
 
-.bg12 {
+.bg12, .bt0 {
   background: #ffac6f;
-  background: linear-gradient(to bottom, #ffac6f 0%, #ffe467 100%);
+  background: linear-gradient(-5deg, #ffac6f 0%, #ffe467 100%);
 }
 
-.bg13 {
+.bg13, .bt1 {
   background: #fda65a;
-  background: linear-gradient(to bottom, #fda65a 0%, #ffe467 100%);
+  background: linear-gradient(-5deg, #fda65a 0%, #ffe467 100%);
 }
 
-.bg14 {
+.bg14, .bt2 {
   background: #fd9e58;
-  background: linear-gradient(to bottom, #fd9e58 0%, #ffe467 100%);
+  background: linear-gradient(-5deg, #fd9e58 0%, #ffe467 100%);
 }
 
-.bg15 {
+.bg15, .bt3 {
   background: #f18448;
-  background: linear-gradient(to bottom, #f18448 0%, #ffd364 100%);
+  background: linear-gradient(-5deg, #f18448 0%, #ffd364 100%);
 }
 
-.bg16 {
+.bg16, .bt4 {
   background: #f06b7e;
-  background: linear-gradient(to bottom, #f06b7e 0%, #f9a856 100%);
+  background: linear-gradient(-5deg, #f06b7e 0%, #f9a856 100%);
 }
 
-.bg17 {
+.bg17, .bt5 {
   background: #ca5a92;
-  background: linear-gradient(to bottom, #ca5a92 0%, #f4896b 100%);
+  background: linear-gradient(-5deg, #ca5a92 0%, #f4896b 100%);
 }
 
-.bg18 {
+.bg18, .bt6 {
   background: #5b2c83;
-  background: linear-gradient(to bottom, #5b2c83 0%, #d1628b 100%);
+  background: linear-gradient(-5deg, #5b2c83 0%, #d1628b 100%);
 }
 
-.bg19 {
+.bg19, .bt7 {
   background: #371a79;
-  background: linear-gradient(to bottom, #371a79 0%, #713684 100%);
+  background: linear-gradient(-5deg, #371a79 0%, #713684 100%);
 }
 
-.bg20 {
+.bg20, .bt8 {
   background: #28166b;
-  background: linear-gradient(to bottom, #28166b 0%, #45217c 100%);
+  background: linear-gradient(-5deg, #28166b 0%, #45217c 100%);
 }
 
-.bg21 {
+.bg21, .bt9 {
   background: #192861;
-  background: linear-gradient(to bottom, #192861 0%, #372074 100%);
+  background: linear-gradient(-5deg, #192861 0%, #372074 100%);
 }
 
-.bg22 {
+.bg22, .bt10 {
   background: #040b3c;
-  background: linear-gradient(to bottom, #040b3c 0%, #233072 100%);
+  background: linear-gradient(-5deg, #040b3c 0%, #233072 100%);
 }
 
-.bg23 {
+.bg23, .bt11 {
   background: #040b3c;
-  background: linear-gradient(to bottom, #040b3c 0%, #012459 100%);
+  background: linear-gradient(-5deg, #040b3c 0%, #012459 100%);
 }
