@@ -1,8 +1,11 @@
 import React from 'react'
 
 export default function App() {
+  const hours = new Date().getHours();
   return (
-    <div>App</div>
+    <>
+      <div className={`min-h-screen h-full w-full bg${hours}`} ></div>
+    </>
   )
 }
 
