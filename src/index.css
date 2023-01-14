@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -12,8 +13,138 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-midnight:00
 
-.bg1{
-  background-color: red;
+/* Dusk             5,6
+Early morning    7,8
+Morning          9,10,11
+Late morning     11
+Midday           12
+Early afternoon  13,14,15
+Late afternoon   16
+Dawn             17,18 
+Early evening    19
+Evening          20
+Night            21,22,23
+Midnight         24
+Late night       1,2
+Witching Hour    3,4 */
+
+.bg0 {
+  background: #012459;
+  background: linear-gradient(to bottom, #012459 0%, #001322 100%);
+}
+
+.bg1 {
+  background: #003972;
+  background: linear-gradient(to bottom, #003972 0%, #001322 100%);
+}
+
+.bg2 {
+  background: #003972;
+  background: linear-gradient(to bottom, #003972 0%, #001322 100%);
+}
+
+.bg3 {
+  background: #004372;
+  background: linear-gradient(to bottom, #004372 0%, #00182b 100%);
+}
+
+.bg4 {
+  background: #004372;
+  background: linear-gradient(to bottom, #004372 0%, #011d34 100%);
+}
+
+.bg5 {
+  background: #016792;
+  background: linear-gradient(to bottom, #016792 0%, #00182b 100%);
+}
+
+.bg6 {
+  background: #07729f;
+  background: linear-gradient(to bottom, #07729f 0%, #042c47 100%);
+}
+
+.bg7 {
+  background: #12a1c0;
+  background: linear-gradient(to bottom, #12a1c0 0%, #07506e 100%);
+}
+
+.bg8 {
+  background: #74d4cc;
+  background: linear-gradient(to bottom, #74d4cc 0%, #1386a6 100%);
+}
+
+.bg9 {
+  background: #efeebc;
+  background: linear-gradient(to bottom, #efeebc 0%, #61d0cf 100%);
+}
+
+.bg10 {
+  background: #fee154;
+  background: linear-gradient(to bottom, #fee154 0%, #a3dec6 100%);
+}
+
+.bg11 {
+  background: #fdc352;
+  background: linear-gradient(to bottom, #fdc352 0%, #e8ed92 100%);
+}
+
+.bg12 {
+  background: #ffac6f;
+  background: linear-gradient(to bottom, #ffac6f 0%, #ffe467 100%);
+}
+
+.bg13 {
+  background: #fda65a;
+  background: linear-gradient(to bottom, #fda65a 0%, #ffe467 100%);
+}
+
+.bg14 {
+  background: #fd9e58;
+  background: linear-gradient(to bottom, #fd9e58 0%, #ffe467 100%);
+}
+
+.bg15 {
+  background: #f18448;
+  background: linear-gradient(to bottom, #f18448 0%, #ffd364 100%);
+}
+
+.bg16 {
+  background: #f06b7e;
+  background: linear-gradient(to bottom, #f06b7e 0%, #f9a856 100%);
+}
+
+.bg17 {
+  background: #ca5a92;
+  background: linear-gradient(to bottom, #ca5a92 0%, #f4896b 100%);
+}
+
+.bg18 {
+  background: #5b2c83;
+  background: linear-gradient(to bottom, #5b2c83 0%, #d1628b 100%);
+}
+
+.bg19 {
+  background: #371a79;
+  background: linear-gradient(to bottom, #371a79 0%, #713684 100%);
+}
+
+.bg20 {
+  background: #28166b;
+  background: linear-gradient(to bottom, #28166b 0%, #45217c 100%);
+}
+
+.bg21 {
+  background: #192861;
+  background: linear-gradient(to bottom, #192861 0%, #372074 100%);
+}
+
+.bg22 {
+  background: #040b3c;
+  background: linear-gradient(to bottom, #040b3c 0%, #233072 100%);
+}
+
+.bg23 {
+  background: #040b3c;
+  background: linear-gradient(to bottom, #040b3c 0%, #012459 100%);
 }

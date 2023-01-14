@@ -1,10 +1,16 @@
 import React from 'react'
+import MainTemp from './components/MainTemp';
+import Search from './components/Search';
 
 export default function App() {
   const hours = new Date().getHours();
+  console.log(hours)
   return (
     <>
-      <div className={`min-h-screen h-full w-full bg${hours}`} ></div>
+      <div className={`min-h-screen h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
+        <Search/>
+        <MainTemp/>
+      </div>
     </>
   )
 }
