@@ -44,7 +44,7 @@ export default function Search() {
                 />
                 <button
                     onClick={(e) => handleSubmit(e)}
-                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${width ? 'hover:w-full' : 'hover:w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
+                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${!width ? 'hover:w-full' : 'hover:w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
                 >
                     <IoMdSearch className='text-2xl text-white' />
                 </button>
