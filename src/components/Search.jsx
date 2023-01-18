@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { IoMdSearch } from 'react-icons/io';
 export default function Search() {
-    // const hours = new Date().getHours();
-    const hours =5;
+    const hours = new Date().getHours();
+    // const hours = 5;
     const [width, setWidth] = useState(false);
     // const input = document.querySelector('input');
     const [inputValue, setInputValue] = useState('');
@@ -17,18 +17,21 @@ export default function Search() {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
+        setWidth(false);
         if (inputValue !== '') {
             // setLocation(inputValue);
         }
-
-        const input = document.querySelector('input');
         if (inputValue == '') {
             setAnimate(true);
             setTimeout(() => {
                 setAnimate(false);
             }, 500);
+            setWidth(false);
         } else {
             setWidth(true);
+            setTimeout(() => {
+                setWidth(false);
+            }, 500);
         }
         setInputValue('');
     };
@@ -44,7 +47,7 @@ export default function Search() {
                 />
                 <button
                     onClick={(e) => handleSubmit(e)}
-                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${width ? 'w-full' : 'w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
+                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${width ? 'hover:w-full' : 'hover:w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
                 >
                     <IoMdSearch className='text-2xl text-white' />
                 </button>

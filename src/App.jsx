@@ -3,8 +3,8 @@ import MainTemp from './components/MainTemp';
 import Search from './components/Search';
 
 export default function App() {
-  // const hours = new Date().getHours();
-  const hours = 5;
+  const hours = new Date().getHours();
+  // const hours = 5;
   console.log(hours)
   return (
     <>
