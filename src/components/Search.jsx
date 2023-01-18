@@ -16,12 +16,13 @@ export default function Search() {
         setInputValue(e.target.value);
     };
     const handleSubmit = (e) => {
+        e.preventDefault();
         if (inputValue !== '') {
-            setLocation(inputValue);
+            // setLocation(inputValue);
         }
 
         const input = document.querySelector('input');
-        if (input.value === '') {
+        if (inputValue == '') {
             setAnimate(true);
             setTimeout(() => {
                 setAnimate(false);
@@ -29,14 +30,13 @@ export default function Search() {
         } else {
             setWidth(true);
         }
-        input.value = '';
-        e.preventDefault();
+        setInputValue('');
     };
     return (
         <form
             className={`${animate ? 'animate-shake' : 'animate-none'} h-12 bg-white/10 w-full max-w-[600px] rounded-full backdrop-blur-[100px] mb-8 overflow-hidden`}>
             <div className='h-full relative flex items-center justify-between overflow-hidden'>
-                <input
+                <input value={inputValue}
                     onChange={(e) => handleInput(e)}
                     className='flex-1 bg-transparent outline-none placeholder:text-white/40 text-white/40 text-[15px] font-light pl-6 h-full'
                     type='text'
@@ -44,7 +44,7 @@ export default function Search() {
                 />
                 <button
                     onClick={(e) => handleSubmit(e)}
-                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${!width ? 'hover:w-full' : 'hover:w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
+                    className={`absolute right-0 top-0 bt${hours} opacity-30 hover:opacity-90 transition-all duration-300 ${width ? 'w-full' : 'w-24'} h-12 w-24 rounded-full flex justify-center items-center backdrop-blur-[32px]`}
                 >
                     <IoMdSearch className='text-2xl text-white' />
                 </button>
