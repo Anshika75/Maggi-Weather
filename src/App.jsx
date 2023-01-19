@@ -9,8 +9,10 @@ export default function App() {
   return (
     <>
       <div className={`min-h-screen h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
-        <Search/>
-        <MainTemp/>
+        <Search />
+        <div className="flex flex-row w-full mt-5">
+          <MainTemp />
+        </div>
       </div>
     </>
   )
