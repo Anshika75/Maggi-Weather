@@ -1,4 +1,5 @@
 import React from 'react'
+import Hourly from './components/Hourly';
 import MainTemp from './components/MainTemp';
 import Search from './components/Search';
 
@@ -12,6 +13,7 @@ export default function App() {
         <Search />
         <div className="flex flex-row w-full mt-5">
           <MainTemp />
+          <Hourly/>
         </div>
       </div>
     </>
