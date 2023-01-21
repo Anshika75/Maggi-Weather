@@ -4,14 +4,14 @@ import MainTemp from './components/MainTemp';
 import Search from './components/Search';
 
 export default function App() {
-  const hours = new Date().getHours();
-  // const hours = 5;
+  // const hours = new Date().getHours();
+  const hours = 5;
   console.log(hours)
   return (
     <>
       <div className={`min-h-screen h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
         <Search />
-        <div className="flex flex-row w-full mt-5">
+        <div className="flex flex-row justify-between w-[70vw] bg-red-700 mt-5">
           <MainTemp />
           <Hourly/>
         </div>
