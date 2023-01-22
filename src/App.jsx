@@ -2,6 +2,7 @@ import React from 'react'
 import Hourly from './components/Hourly';
 import MainTemp from './components/MainTemp';
 import Search from './components/Search';
+import Table from './components/Table';
 
 export default function App() {
   // const hours = new Date().getHours();
@@ -13,7 +14,10 @@ export default function App() {
         <Search />
         <div className="flex flex-row justify-between w-[70vw] bg-red-700 mt-5">
           <MainTemp />
-          <Hourly/>
+          <Hourly />
+        </div>
+        <div className="flex flex-row justify-center items-center w-[70vw] bg-blue-600 mt-5">
+          <Table />
         </div>
       </div>
     </>
