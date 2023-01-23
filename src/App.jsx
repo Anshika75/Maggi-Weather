@@ -12,11 +12,11 @@ export default function App() {
     <>
       <div className={`min-h-screen h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
         <Search />
-        <div className="flex flex-row justify-between w-[70vw] bg-red-700 mt-5">
+        <div className="flex flex-row justify-between w-[70vw] mt-12">
           <MainTemp />
           <Hourly />
         </div>
-        <div className="flex flex-row justify-center items-center w-[70vw] bg-blue-600 mt-5">
+        <div className="flex flex-row justify-center items-center w-[70vw] mt-12">
           <Table />
         </div>
       </div>
