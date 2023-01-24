@@ -11,6 +11,8 @@ import {
 export default function Table() {
     return (
         <>
+            <div className="hidden md:flex flex-col w-full">
+            <p className="text-white/70 text-sm font-normal">Hourly Updates</p>
             <table className='w-full border-separate border-spacing-x-0 border-spacing-y-3'>
                 <tr className='w-full h-[75px] bg-white/10 backdrop-blur-[100px] shadow-sm'>
                     <td className="text-center">
@@ -153,6 +155,7 @@ export default function Table() {
                     </td>
                 </tr>
             </table>
+            </div>
         </>
     )
 }

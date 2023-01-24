@@ -1,6 +1,8 @@
 import React from 'react'
+import DetailBox from './components/DetailBox';
 import Hourly from './components/Hourly';
 import MainTemp from './components/MainTemp';
+import MobileTable from './components/MobileTable';
 import Search from './components/Search';
 import Table from './components/Table';
 
@@ -12,12 +14,14 @@ export default function App() {
     <>
       <div className={`min-h-screen h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
         <Search />
-        <div className="flex flex-row justify-between w-[70vw] mt-12">
+        <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
           <MainTemp />
           <Hourly />
         </div>
-        <div className="flex flex-row justify-center items-center w-[70vw] mt-12">
+        <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
           <Table />
+          <MobileTable/>
+          <DetailBox/>
         </div>
       </div>
     </>
