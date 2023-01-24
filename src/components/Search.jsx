@@ -1,17 +1,10 @@
 import React, { useState } from 'react'
 import { IoMdSearch } from 'react-icons/io';
-export default function Search() {
+export default function Search({city,setCity}) {
     const hours = new Date().getHours();
-    // const hours = 5;
     const [width, setWidth] = useState(false);
-    // const input = document.querySelector('input');
     const [inputValue, setInputValue] = useState('');
     const [animate, setAnimate] = useState(false);
-    // if (input.value === '') {
-    //     width = 'w-24';
-    // } else {
-    //     width = 'w-full';
-    // }
     const handleInput = (e) => {
         setInputValue(e.target.value);
     };
@@ -19,7 +12,7 @@ export default function Search() {
         e.preventDefault();
         setWidth(false);
         if (inputValue !== '') {
-            // setLocation(inputValue);
+            setCity(inputValue);
         }
         if (inputValue == '') {
             setAnimate(true);
@@ -37,7 +30,7 @@ export default function Search() {
     };
     return (
         <form
-            className={`${animate ? 'animate-shake' : 'animate-none'} h-12 bg-white/10 w-full max-w-[600px] rounded-full backdrop-blur-[100px] mb-8 overflow-hidden`}>
+            className={`${animate ? 'animate-shake' : 'animate-none'} z-20 h-12 bg-white/10 w-full max-w-[600px] rounded-full backdrop-blur-[100px] mb-8 overflow-hidden`}>
             <div className='h-full relative flex items-center justify-between overflow-hidden'>
                 <input value={inputValue}
                     onChange={(e) => handleInput(e)}

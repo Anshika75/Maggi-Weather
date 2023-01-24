@@ -11,9 +11,10 @@ import {
 export default function Table() {
     return (
         <>
-            <div className="hidden md:flex flex-col w-full">
+            <div className="hidden md:flex flex-col w-full z-20">
             <p className="text-white/70 text-sm font-normal">Hourly Updates</p>
             <table className='w-full border-separate border-spacing-x-0 border-spacing-y-3'>
+                <tbody>
                 <tr className='w-full h-[75px] bg-white/10 backdrop-blur-[100px] shadow-sm'>
                     <td className="text-center">
                         <p className="text-white text-2xl font-normal">Tue</p>
@@ -154,6 +155,7 @@ export default function Table() {
                         <p className="text-white text-[15px] font-light">Rain</p>
                     </td>
                 </tr>
+                </tbody>
             </table>
             </div>
         </>

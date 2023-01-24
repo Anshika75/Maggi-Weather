@@ -1,5 +1,4 @@
-import React from 'react'
-import Detail from './Detail'
+import React from 'react';
 import {
     IoMdSunny,
     IoMdRainy,
@@ -15,7 +14,7 @@ export default function DetailBox() {
     return (
         <>
 
-            <div className="flex flex-col w-full mt-12">
+            <div className="flex flex-col w-full mt-12 z-20">
                 <p className="text-white/70 text-sm font-normal mb-2">Weather Updates</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center w-full gap-4">
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">

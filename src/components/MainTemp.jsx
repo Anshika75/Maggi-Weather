@@ -22,7 +22,7 @@ import { TbTemperatureCelsius } from 'react-icons/tb';
 export default function MainTemp() {
   return (
     <>
-      <div className="flex flex-col rounded-md bg-white/10 backdrop-blur-[100px] p-5 shadow-sm">
+      <div className="z-20 flex flex-col rounded-md bg-white/10 backdrop-blur-[100px] p-5 shadow-sm">
         <div className="flex flex-row items-end pb-3">
           <p className='text-5xl font-semibold text-white opacity-80'>15<span>°</span>C</p> 
           <p className='ml-2 text-white font-light'>Sunny</p>

@@ -1,17 +1,33 @@
-import Search from './components/Search';
-import Weather from './components/Weather';
-import Main from './components/Weather';
-import { useState } from 'react';
-export default function App() {
-  const [city, setCity] = useState("Patna");
-  console.log(city);
-  const hours = new Date().getHours();
-  return(
+import React, { useState } from 'react'
+import axios from 'axios';
+import DetailBox from './DetailBox';
+import Hourly from './Hourly';
+import MainTemp from './MainTemp';
+import MobileTable from './MobileTable';
+import Table from './Table';
+
+export default function Weather({city}) {
+  const APIkey = '41f10dab3b3d521cccd0c5bc11f21ad6';
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`;
+  const [data, setData] = useState(null);
+  axios
+      .get(url)
+      .then((res) => {
+        setTimeout(() => {
+          setData(res.data);
+        }, 1500);
+      })
+  console.log(data)
+  return (
     <>
-      <div className={`min-h-screen relative h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
-        <div className="absolute w-full h-full bg-black/40 top-0 left-0 backdrop-blur-[100px]"></div>
-        <Search city={city} setCity={setCity} />
-       <Weather city={city}/>
+      <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
+        <MainTemp />
+        <Hourly />
+      </div>
+      <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
+        <Table />
+        <MobileTable />
+        <DetailBox />
       </div>
     </>
   )
