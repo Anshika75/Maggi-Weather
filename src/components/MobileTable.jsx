@@ -1,13 +1,5 @@
 import React from 'react'
-
-import {
-    IoMdSunny,
-    IoMdRainy,
-    IoMdCloudy,
-    IoMdSnow,
-    IoMdThunderstorm,
-    IoMdSearch,
-} from 'react-icons/io';
+import { IoMdCloudy } from 'react-icons/io';
 export default function MobileTable() {
     return (
         <>
