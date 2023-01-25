@@ -1,12 +1,4 @@
 import React from 'react';
-import {
-    IoMdSunny,
-    IoMdRainy,
-    IoMdCloudy,
-    IoMdSnow,
-    IoMdThunderstorm,
-    IoMdSearch,
-} from 'react-icons/io';
 import { FiSunrise, FiSunset, FiWind, FiEye } from "react-icons/fi";
 import { WiRaindrop, WiHumidity } from "react-icons/wi";
 import { TbArrowsDown, TbTemperature } from "react-icons/tb";

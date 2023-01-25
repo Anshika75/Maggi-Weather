@@ -28,7 +28,7 @@ export default function Weather({ city }) {
         })
       })
   }, [city])
-  if (!data) return <div>Loading...</div>
+  if (!data || !hourlyData) return <div>Loading...</div>
 
   console.log(data)
   console.log(hourlyData)
@@ -41,11 +41,16 @@ export default function Weather({ city }) {
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
         <Table />
         <MobileTable />
-        <DetailBox sunriseHours={new Date(data.sys.sunrise).toLocaleTimeString().split(":")[0]} 
-                   sunriseMins={new Date(data.sys.sunrise).toLocaleTimeString().split(":")[1]} 
-                   sunsetHours={new Date(data.sys.sunset).toLocaleTimeString().split(":")[0]} 
-                   sunsetMins={new Date(data.sys.sunset).toLocaleTimeString().split(":")[1]} 
+        <DetailBox sunriseHours={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[0]} 
+                   sunriseMins={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[1]} 
+                   sunsetHours={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[0]} 
+                   sunsetMins={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[1]} 
                    uv={hourlyData.current.uvi}
+                   windSpeed = {hourlyData.current['wind_speed']}
+                   visibility = {hourlyData.current.visibility}
+                   humidity = {hourlyData.current.humidity}
+                   pressure = {hourlyData.current.pressure}
+                   feelsLike = {hourlyData.current.feels_like}
                    />
       </div>
     </>
