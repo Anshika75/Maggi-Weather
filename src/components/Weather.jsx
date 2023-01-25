@@ -47,7 +47,7 @@ export default function Weather({ city }) {
                    sunsetMins={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[1]} 
                    uv={hourlyData.current.uvi}
                    windSpeed = {hourlyData.current['wind_speed']}
-                   visibility = {hourlyData.current.visibility}
+                   visibility = {hourlyData.current.visibility/1000}
                    humidity = {hourlyData.current.humidity}
                    pressure = {hourlyData.current.pressure}
                    feelsLike = {hourlyData.current.feels_like}
