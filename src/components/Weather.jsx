@@ -36,10 +36,10 @@ export default function Weather({ city }) {
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
         <MainTemp temp={Math.round(data.main.temp)} city={data.name} desc={data.weather[0].main} />
-        <Hourly />
+        <Hourly data={hourlyData.hourly} />
       </div>
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
-        <Table />
+        <Table  data={hourlyData.daily} />
         <MobileTable />
         <DetailBox sunriseHours={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[0]} 
                    sunriseMins={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[1]} 

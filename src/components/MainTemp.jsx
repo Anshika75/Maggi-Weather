@@ -16,7 +16,7 @@ export default function MainTemp({temp,desc,city}) {
         </div>
         <div className="flex flex-row items-center border-t-[1px] border-white/10 pt-3">
           <div className="grid place-items-center text-white text-5xl">
-            {GetIcon(desc)}
+            {GetIcon(desc, date.getHours())}
           </div>
           <div className="flex flex-col justify-center ml-2">
             <p className='text-white uppercase font-extralight text-[10px] leading-[12px]'>{city}</p>

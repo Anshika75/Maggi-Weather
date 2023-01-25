@@ -4,6 +4,7 @@ import {
     IoMdCloudy,
     IoMdSnow,
     IoMdThunderstorm,
+    IoMdMoon,
 } from 'react-icons/io';
 import { 
     TbMist, 
@@ -15,7 +16,7 @@ import {
 } from 'react-icons/bs';
 import { GiSmokeBomb } from "react-icons/gi";
 
-export default function GetIcon(desc) {
+export default function GetIcon(desc, hour) {
     let icon;
     console.log(desc);
     switch (desc) {
@@ -26,16 +27,20 @@ export default function GetIcon(desc) {
             icon = <BsCloudHaze2Fill />;
             break;
         case 'Rain':
-            icon = <IoMdRainy className='text-[#31cafb]' />;
+            icon = <IoMdRainy />;
             break;
         case 'Clear':
-            icon = <IoMdSunny className='text-[#ffde33]' />;
+            if (hour >= 18 || hour <= 6){
+                icon = <IoMdMoon />;
+            } else{
+            icon = <IoMdSunny />;
+            }
             break;
         case 'Drizzle':
-            icon = <BsCloudDrizzleFill className='text-[#31cafb]' />;
+            icon = <BsCloudDrizzleFill />;
             break;
         case 'Snow':
-            icon = <IoMdSnow className='text-[#31cafb]' />;
+            icon = <IoMdSnow />;
             break;
         case 'Thunderstorm':
             icon = <IoMdThunderstorm />;
