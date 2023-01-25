@@ -4,6 +4,7 @@ import { WiRaindrop, WiHumidity } from "react-icons/wi";
 import { TbArrowsDown, TbTemperature } from "react-icons/tb";
 import { BsThermometerSun } from "react-icons/bs";
 export default function DetailBox({sunriseHours, sunsetHours, sunriseMins, sunsetMins, windSpeed, visibility, humidity, pressure, uv, feelsLike}) {
+    console.log(visibility)
     return (
         <>
 
