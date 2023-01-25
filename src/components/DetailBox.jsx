@@ -10,7 +10,8 @@ import {
 import { FiSunrise, FiSunset, FiWind, FiEye } from "react-icons/fi";
 import { WiRaindrop, WiHumidity } from "react-icons/wi";
 import { TbArrowsDown, TbTemperature } from "react-icons/tb";
-export default function DetailBox() {
+import { BsThermometerSun } from "react-icons/bs";
+export default function DetailBox({sunriseHours, sunsetHours, sunriseMins, sunsetMins, windSpeed, visibility, humidity, pressure, uv, feelsLike}) {
     return (
         <>
 
@@ -19,35 +20,35 @@ export default function DetailBox() {
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center w-full gap-4">
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">SUNRISE</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">06:57am <FiSunrise/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">0{sunriseHours}:{sunriseMins}am <FiSunrise/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">SUNSET</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">05:04pm <FiSunset/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">0{sunsetHours}:{sunsetMins}pm <FiSunset/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
-                        <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">PRECIPITATION</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between items-center">60% <span className="scale-[2] origin-center"><WiRaindrop/></span> </p>
+                        <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">UV INDEX</p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between items-center">{uv}% <BsThermometerSun/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">HUMIDITY</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between items-center">15%  <span className="scale-[1.5] origin-center"><WiHumidity/></span> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between items-center">{humidity}%  <span className="scale-[1.5] origin-center"><WiHumidity/></span> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">WIND</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">16km/h <FiWind/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">{windSpeed}km/h <FiWind/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">PRESSURE</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">1021 hPa <TbArrowsDown/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">{pressure}hPa <TbArrowsDown/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">FEELS LIKE</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">11°C <TbTemperature/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">{feelsLike}°C <TbTemperature/> </p>
                     </div>
                     <div className="w-full max-w-[200px] md:max-w-full h-[100px] bg-white/80 rounded-sm shadow-sm flex flex-col justify-center">
                         <p className="text-black/60 uppercase font-bold text-[10px] md:text-xs px-2 md:px-5">VISIBILITY</p>
-                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">50km <FiEye/> </p>
+                        <p className="text-black/80 font-semibold md:text-2xl px-2 md:px-5 flex flex-row justify-between">{visibility}km <FiEye/> </p>
                     </div>
 
                 </div>

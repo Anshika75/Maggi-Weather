@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import DetailBox from './DetailBox';
 import Hourly from './Hourly';
@@ -6,28 +6,47 @@ import MainTemp from './MainTemp';
 import MobileTable from './MobileTable';
 import Table from './Table';
 
-export default function Weather({city}) {
+
+export default function Weather({ city }) {
   const APIkey = '41f10dab3b3d521cccd0c5bc11f21ad6';
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`;
   const [data, setData] = useState(null);
-  axios
+  const [hourlyData, setHourlyData] = useState(null);
+
+  useEffect(() => {
+    axios
       .get(url)
       .then((res) => {
-        setTimeout(() => {
-          setData(res.data);
-        }, 1500);
+
+        setData(res.data);
+        const hourlyUrl = `https://openweathermap.org/data/2.5/onecall?lat=${res.data.coord.lat}&lon=${res.data.coord.lon}&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`
+        axios
+        .get(hourlyUrl)
+        .then((hourlyres) => {
+          setHourlyData(hourlyres.data)
+          console.log(hourlyres.data)
+        })
       })
+  }, [city])
+  if (!data) return <div>Loading...</div>
+
   console.log(data)
+  console.log(hourlyData)
   return (
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
-        <MainTemp />
+        <MainTemp temp={Math.round(data.main.temp)} city={data.name} desc={data.weather[0].main} />
         <Hourly />
       </div>
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
         <Table />
         <MobileTable />
-        <DetailBox />
+        <DetailBox sunriseHours={new Date(data.sys.sunrise).toLocaleTimeString().split(":")[0]} 
+                   sunriseMins={new Date(data.sys.sunrise).toLocaleTimeString().split(":")[1]} 
+                   sunsetHours={new Date(data.sys.sunset).toLocaleTimeString().split(":")[0]} 
+                   sunsetMins={new Date(data.sys.sunset).toLocaleTimeString().split(":")[1]} 
+                   uv={hourlyData.current.uvi}
+                   />
       </div>
     </>
   )
