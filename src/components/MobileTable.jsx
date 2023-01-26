@@ -8,7 +8,7 @@ function getDateComponent(dt) {
     <>
       <p className="text-white text-2xl font-normal">{days[date.getDay()]}</p>
       <p className="text-white text-[15px] font-light">
-        {date.getMonth() + 1}/{date.getDate()}
+        {date.getDate()}/{date.getMonth() + 1}
       </p>
     </>
   );
