@@ -1,6 +1,5 @@
 import React from 'react'
 import GetIcon from '../helpers/GetIcon';
-import { TbTemperatureCelsius } from 'react-icons/tb';
 
 export default function MainTemp({temp,desc,city}) {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
