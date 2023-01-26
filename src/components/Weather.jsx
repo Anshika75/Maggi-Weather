@@ -40,7 +40,7 @@ export default function Weather({ city }) {
       </div>
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
         <Table  data={hourlyData.daily} />
-        <MobileTable />
+        <MobileTable data={hourlyData.daily} />
         <DetailBox sunriseHours={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[0]} 
                    sunriseMins={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[1]} 
                    sunsetHours={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[0]} 

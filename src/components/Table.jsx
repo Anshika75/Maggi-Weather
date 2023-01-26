@@ -45,10 +45,9 @@ export default function Table({ data }) {
   return (
     <>
       <div className="hidden md:flex flex-col w-full z-20">
-        <p className="text-white/70 text-sm font-normal">Hourly Updates</p>
+        <p className="text-white/70 text-sm font-normal">Weekly Updates</p>
         <table className="w-full border-separate border-spacing-x-0 border-spacing-y-3">
           <tbody>
-            {getDailyComponent(data[0])}
             {getDailyComponent(data[1])}
             {getDailyComponent(data[2])}
             {getDailyComponent(data[3])}
