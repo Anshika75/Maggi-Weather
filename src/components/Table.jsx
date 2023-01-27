@@ -15,7 +15,7 @@ function getDateComponent(dt) {
 }
 function getDailyComponent(data) {
   return (
-    <tr className="w-full h-[75px] bg-white/10 backdrop-blur-[100px] shadow-sm">
+    <tr className="w-full h-[75px] bg-white/10 backdrop-blur-[100px] shadow-sm transition-all cursor-pointer hover:scale-[1.02] hover:shadow-[0px_0px_10px_0px_rgba(255,255,255,0.4)]">
       <td className="text-center">{getDateComponent(data.dt)}</td>
       <td className="text-center">
         <p className="text-white text-5xl grid place-items-center">

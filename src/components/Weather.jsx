@@ -28,10 +28,7 @@ export default function Weather({ city }) {
         })
       })
   }, [city])
-  if (!data || !hourlyData) return <div>Loading...</div>
-
-  console.log(data)
-  console.log(hourlyData)
+  if (!data || !hourlyData) return <div className='text-5xl text-white'>Loading...</div>
   return (
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">

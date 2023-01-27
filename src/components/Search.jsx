@@ -50,7 +50,7 @@ export default function Search({city,setCity}) {
                 </button>
             </div>
         </form>
-        <div className={`${animate ? 'flex' : 'hidden'} w-full max-w-[600px] absolute top-16 left-[50%] translate-x-[-50%] min-h-[20px] bg-red-500/50 text-white/40 backdrop-blur-[100px] flex-row items-center p-5 py-2`}>
+        <div className={`${animate ? 'flex' : 'hidden'} w-full max-w-[600px] absolute top-16 left-[50%] translate-x-[-50%] min-h-[20px] bg-red-500/50 text-white/40 backdrop-blur-[100px] flex-row items-center p-5 py-2 shadow-sm rounded-sm`}>
             <p>{error}</p>
             <p className='absolute top-2 right-3 cursor-pointer transition-all hover:text-white/70'> <ImCross/> </p>
         </div>

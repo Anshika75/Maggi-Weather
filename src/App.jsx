@@ -2,14 +2,16 @@ import Search from './components/Search';
 import Weather from './components/Weather';
 import Main from './components/Weather';
 import { useState } from 'react';
+import Logo from './components/Logo';
 export default function App() {
   const [city, setCity] = useState("Patna");
   console.log(city);
   const hours = new Date().getHours();
   return(
     <>
-      <div className={`min-h-screen relative h-full w-full bg${hours} p-3 lg:p-7 flex flex-col justify-start items-center`} >
+      <div className={`min-h-screen relative h-full w-full bg${hours} p-3 pt-20 lg:p-7 lg:pt-20 flex flex-col justify-start items-center `} >
         <div className="absolute w-full h-full bg-black/40 top-0 left-0 backdrop-blur-[100px]"></div>
+        <Logo/>
         <Search city={city} setCity={setCity} />
        <Weather city={city}/>
       </div>
