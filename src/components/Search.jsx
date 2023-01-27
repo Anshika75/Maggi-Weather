@@ -34,7 +34,7 @@ export default function Search({city,setCity}) {
     return (
         <div className="relative flex flex-col justify-center items-center z-20 w-full max-w-[600px]">
             <form
-            className={`${animate ? 'animate-shake' : 'animate-none'} h-12 bg-white/10 w-full rounded-full backdrop-blur-[100px] mb-8 overflow-hidden`}>
+            className={`${animate ? 'animate-shake' : 'animate-none'} h-12 bg-white/10 w-full rounded-full backdrop-blur-[100px] mb-8 overflow-hidden shadow-sm transition-all cursor-pointer hover:scale-[1.02] hover:shadow-[0px_0px_10px_0px_rgba(255,255,255,0.4)] focus:scale-[1.02] focus:shadow-[0px_0px_10px_0px_rgba(255,255,255,0.4)]`}>
             <div className='h-full relative flex items-center justify-between overflow-hidden'>
                 <input value={inputValue}
                     onChange={(e) => handleInput(e)}
