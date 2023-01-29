@@ -7,7 +7,6 @@ export default function DetailBox({sunriseHours, sunsetHours, sunriseMins, sunse
     console.log(visibility)
     return (
         <>
-
             <div className="flex flex-col w-full mt-12 z-20">
                 <p className="text-white/70 text-sm font-normal mb-2">Weather Updates</p>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center w-full gap-4">

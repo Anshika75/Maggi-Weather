@@ -14,6 +14,8 @@ export default function Weather({ city }) {
   const [hourlyData, setHourlyData] = useState(null);
 
   useEffect(() => {
+    setData(null)
+    setHourlyData(null)
     axios
       .get(url)
       .then((res) => {
@@ -28,7 +30,14 @@ export default function Weather({ city }) {
         })
       })
   }, [city])
+<<<<<<< HEAD
+  if (!data || !hourlyData) return <div className='z-20'>Loading...</div>
+
+  console.log(data)
+  console.log(hourlyData)
+=======
   if (!data || !hourlyData) return <div className='text-5xl text-white'>Loading...</div>
+>>>>>>> a15c6560c13afd941815d09af83400aab09e9908
   return (
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
