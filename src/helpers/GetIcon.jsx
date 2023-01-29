@@ -15,6 +15,7 @@ import {
     BsFillCloudFog2Fill,
 } from 'react-icons/bs';
 import { GiSmokeBomb } from "react-icons/gi";
+import { WiDust } from "react-icons/wi";
 
 export default function GetIcon(desc, hour) {
     let icon;
@@ -54,6 +55,8 @@ export default function GetIcon(desc, hour) {
         case 'Smoke':
             icon = <GiSmokeBomb />;
             break;
+        default:
+            icon = <WiDust />;
     }
     console.log(icon);
     return icon;

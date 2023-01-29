@@ -30,10 +30,14 @@ export default function Weather({ city }) {
         })
       })
   }, [city])
+<<<<<<< HEAD
   if (!data || !hourlyData) return <div className='z-20'>Loading...</div>
 
   console.log(data)
   console.log(hourlyData)
+=======
+  if (!data || !hourlyData) return <div className='text-5xl text-white'>Loading...</div>
+>>>>>>> a15c6560c13afd941815d09af83400aab09e9908
   return (
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
@@ -42,7 +46,7 @@ export default function Weather({ city }) {
       </div>
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
         <Table  data={hourlyData.daily} />
-        <MobileTable />
+        <MobileTable data={hourlyData.daily} />
         <DetailBox sunriseHours={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[0]} 
                    sunriseMins={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[1]} 
                    sunsetHours={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[0]} 

@@ -1,6 +1,5 @@
 import React from 'react'
 import GetIcon from '../helpers/GetIcon';
-import { TbTemperatureCelsius } from 'react-icons/tb';
 
 export default function MainTemp({temp,desc,city}) {
   const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
@@ -9,7 +8,7 @@ export default function MainTemp({temp,desc,city}) {
 
   return (
     <>
-      <div className="z-20 flex flex-col rounded-md bg-white/10 backdrop-blur-[100px] p-5 shadow-sm">
+      <div className="z-20 flex flex-col rounded-md bg-white/10 backdrop-blur-[100px] p-5 shadow-sm transition-all cursor-pointer hover:scale-[1.02] hover:shadow-[0px_0px_10px_0px_rgba(255,255,255,0.4)]">
         <div className="flex flex-row items-end pb-3">
           <p className='text-5xl font-semibold text-white opacity-80'>{temp}<span>°</span>C</p> 
           <p className='ml-2 text-white font-light uppercase text-xs'>{desc}</p>
