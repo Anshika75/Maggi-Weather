@@ -1,10 +1,20 @@
 import Search from './components/Search';
+import axios from 'axios';
 import Weather from './components/Weather';
 import Main from './components/Weather';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Logo from './components/Logo';
 export default function App() {
-  const [city, setCity] = useState("Patna");
+  const [city, setCity] = useState("Delhi");
+  useEffect(
+    () => {
+      axios.get("http://ip-api.com/json").then(
+        (res) => {
+          setCity(res.data.city);
+        }
+      )
+    }
+  )
   console.log(city);
   const hours = new Date().getHours();
   return(

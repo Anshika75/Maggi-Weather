@@ -32,7 +32,7 @@ export default function Weather({ city }) {
       })
   }, [city])
   if (!data || !hourlyData) return (<div className={`z-20 text-white text-lg md:text-2xl text${hours} font-black flex flow-row items-center`}>
-    <i class="fa-solid fa-cloud-moon"></i> <p className='ml-2'>Loading...</p>
+    <i className="fa-solid fa-cloud-moon"></i> <p className='ml-2'>Loading...</p>
   </div>)
   return (
     <>
