@@ -12,6 +12,7 @@ export default function Weather({ city }) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`;
   const [data, setData] = useState(null);
   const [hourlyData, setHourlyData] = useState(null);
+  const hours = new Date().getHours();
 
   useEffect(() => {
     setData(null)
@@ -23,21 +24,16 @@ export default function Weather({ city }) {
         setData(res.data);
         const hourlyUrl = `https://openweathermap.org/data/2.5/onecall?lat=${res.data.coord.lat}&lon=${res.data.coord.lon}&units=metric&appid=439d4b804bc8187953eb36d2a8c26a02`
         axios
-        .get(hourlyUrl)
-        .then((hourlyres) => {
-          setHourlyData(hourlyres.data)
-          console.log(hourlyres.data)
-        })
+          .get(hourlyUrl)
+          .then((hourlyres) => {
+            setHourlyData(hourlyres.data)
+            console.log(hourlyres.data)
+          })
       })
   }, [city])
-<<<<<<< HEAD
-  if (!data || !hourlyData) return <div className='z-20'>Loading...</div>
-
-  console.log(data)
-  console.log(hourlyData)
-=======
-  if (!data || !hourlyData) return <div className='text-5xl text-white'>Loading...</div>
->>>>>>> a15c6560c13afd941815d09af83400aab09e9908
+  if (!data || !hourlyData) return (<div className={`z-20 text-white text-lg md:text-2xl text${hours} font-black flex flow-row items-center`}>
+    <i class="fa-solid fa-cloud-moon"></i> <p className='ml-2'>Loading...</p>
+  </div>)
   return (
     <>
       <div className="flex flex-row flex-wrap md:flex-nowrap justify-center md:justify-between w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
@@ -45,19 +41,19 @@ export default function Weather({ city }) {
         <Hourly data={hourlyData.hourly} />
       </div>
       <div className="flex flex-col justify-center items-center w-[90vw] md:w-[85vw] lg:w-[75vw] mt-12">
-        <Table  data={hourlyData.daily} />
+        <Table data={hourlyData.daily} />
         <MobileTable data={hourlyData.daily} />
-        <DetailBox sunriseHours={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[0]} 
-                   sunriseMins={new Date(data.sys.sunrise*1000).toLocaleTimeString().split(":")[1]} 
-                   sunsetHours={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[0]} 
-                   sunsetMins={new Date(data.sys.sunset*1000).toLocaleTimeString().split(":")[1]} 
-                   uv={hourlyData.current.uvi}
-                   windSpeed = {hourlyData.current['wind_speed']}
-                   visibility = {hourlyData.current.visibility/1000}
-                   humidity = {hourlyData.current.humidity}
-                   pressure = {hourlyData.current.pressure}
-                   feelsLike = {hourlyData.current.feels_like}
-                   />
+        <DetailBox sunriseHours={new Date(data.sys.sunrise * 1000).toLocaleTimeString().split(":")[0]}
+          sunriseMins={new Date(data.sys.sunrise * 1000).toLocaleTimeString().split(":")[1]}
+          sunsetHours={new Date(data.sys.sunset * 1000).toLocaleTimeString().split(":")[0]}
+          sunsetMins={new Date(data.sys.sunset * 1000).toLocaleTimeString().split(":")[1]}
+          uv={hourlyData.current.uvi}
+          windSpeed={hourlyData.current['wind_speed']}
+          visibility={hourlyData.current.visibility / 1000}
+          humidity={hourlyData.current.humidity}
+          pressure={hourlyData.current.pressure}
+          feelsLike={hourlyData.current.feels_like}
+        />
       </div>
     </>
   )
